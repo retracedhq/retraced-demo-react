@@ -26,6 +26,11 @@ RETRACED_API_TOKEN=... RETRACED_PROJECTID=... yarn serve-backend
 
 Then visit http://localhost:3000 to view events.
 
+
+![example](./viewer.png)
+
+
+
 This project uses `react-scripts` to simplify build configuration. You can use `npm eject` to get the webpack etc. configurations.
 
 ### Create React App

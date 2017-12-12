@@ -6,6 +6,14 @@ const util = require("util");
 const app = express();
 
 const chance = new Chance();
+const actions = [
+  "license.update",
+  "spline.reticulate",
+  "user.login",
+  "release.promote",
+  "wozniak.bore",
+  "page.load",
+];
 
 // require api token / project to start
 if (!process.env.RETRACED_API_TOKEN || !process.env.RETRACED_PROJECTID) {
@@ -40,11 +48,13 @@ app.get("/api/viewertoken", async (req, res) => {
   let actor_id = chance.guid();
   let actor_name = chance.name();
 
+  // use a random action
+  let randomAction = actions[chance.integer({ min: 0, max: actions.length - 1 })];
 
   // Report an event on every page load
   retraced.reportEvent({
     crud: "u",
-    action: "splines.reticulate",
+    action: randomAction,
     description: "user <anonymous> reticulated the splines",
     created: new Date(),
     actor: {
