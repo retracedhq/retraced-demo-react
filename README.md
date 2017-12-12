@@ -31,7 +31,7 @@ Then visit http://localhost:3000 to view events.
 
 
 
-This project uses `react-scripts` to simplify build configuration. You can use `npm eject` to get the webpack etc. configurations.
+This project uses `react-scripts` to simplify build configuration. You can use `npm run eject` to get the webpack etc. configurations.
 
 ### Create React App
 
