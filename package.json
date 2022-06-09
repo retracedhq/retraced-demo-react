@@ -3,20 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "chance": "^1.0.12",
-    "cors": "^2.8.4",
-    "react": "^16.2.0",
+    "chance": "^1.1.8",
+    "cors": "^2.8.5",
+    "react": "^18.1.0",
     "react-autobind": "^1.0.6",
-    "react-dom": "^16.2.0",
-    "react-scripts": "^1.0.17",
-    "retraced": "^0.4.0",
-    "retraced-logs-viewer": "^2.2.5"
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1",
+    "retraced": "^0.4.2",
+    "retraced-logs-viewer": "^2.2.7",
+    "typescript": "^4.7.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
-    "serve-backend": "node server/index.js",
+    "serve-backend": "RETRACED_API_TOKEN=dev_write RETRACED_PROJECTID=dev RETRACED_HOST=http://localhost:3000/auditlog node --inspect=0.0.0.0 server/index.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
