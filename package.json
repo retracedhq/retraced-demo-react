@@ -16,7 +16,7 @@
   "scripts": {
     "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
-    "serve-backend": "RETRACED_API_TOKEN=dev_write RETRACED_PROJECTID=dev RETRACED_HOST=http://localhost:3000/auditlog node --inspect=0.0.0.0 server/index.js",
+    "serve-backend": "RETRACED_API_TOKEN=dev RETRACED_PROJECTID=dev RETRACED_HOST=http://localhost:3000/auditlog node --inspect=0.0.0.0 server/index.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
