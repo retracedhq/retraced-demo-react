@@ -4,12 +4,12 @@ import './index.css';
 import * as util from 'util';
 import RetracedEventsBrowser from "retraced-logs-viewer";
 
-const url = `http://localhost:3030/api/viewertoken?team_id=my_savvy_end_customer`;
+const url = `http://localhost:3030/api/viewertoken?team_id=dev`;
 
 // render the events browser
 function render(token) {
   ReactDOM.render(
-    <RetracedEventsBrowser auditLogToken={token}/>,
+    <RetracedEventsBrowser auditLogToken={token} host={"http://localhost:3000/auditlog/viewer/v1"} />,
     document.getElementById('root')
   );
 }
